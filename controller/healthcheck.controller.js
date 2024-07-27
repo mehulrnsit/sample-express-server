@@ -6,7 +6,7 @@ const getHealthCheck = (req, res) => {
     res.status(200).json({ message: 'Express Server is Healthy.' });
 }
 
-module.exports = {
+export {
     getRoot,
     getHealthCheck
 }

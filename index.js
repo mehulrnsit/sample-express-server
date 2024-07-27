@@ -1,9 +1,11 @@
-const express = require('express');
-const routes = require("./routes/route");
-const app = express();
-const databaseConnection = require('./database/connection')
-require("dotenv").config();
+import express from "express";
+import routes from "./routes/route.js";
+import databaseConnection from "./database/connection.js";
+import dotenv from "dotenv";
+dotenv.config();
+
 const port = process.env.PORT || 8000;
+const app = express();
 
 // middleware
 app.use(express.json());
