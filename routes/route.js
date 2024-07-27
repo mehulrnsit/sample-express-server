@@ -1,7 +1,7 @@
-const express = require("express");
+import express from "express";
+import { getRoot, getHealthCheck } from "../controller/healthcheck.controller.js";
+import productRoutes from "./prouduct.route.js";
 const router = express.Router();
-const productRoutes = require("./prouduct.route");
-const { getRoot, getHealthCheck } = require("../controller/healthcheck.controller");
 
 // product routes
 router.use("/api/v1/products", productRoutes);
@@ -16,4 +16,4 @@ router.get("/*", (req, res) => {
 })
 
 // Export the router
-module.exports = router;
+export default router;

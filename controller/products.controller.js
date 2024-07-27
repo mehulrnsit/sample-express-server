@@ -1,5 +1,4 @@
-const Product = require("../models/product.model");
-
+import Product from "../models/product.model.js";
 const createProduct = async (req, res) => {
     try {
         const product = await Product.create(req.body);
@@ -60,7 +59,7 @@ const deleteProductByKey = async (req, res) => {
     }
 }
 
-module.exports = {
+export {
     createProduct,
     getProducts,
     getProductByKey,
